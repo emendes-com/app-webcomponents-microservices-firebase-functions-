@@ -5,8 +5,6 @@ admin.initializeApp(functions.config().firebase, "login");
 
 export const renderFooter = functions.https.onRequest(
   async (request, response) => {
-    console.log('body', request.body);
-    console.log('idToken', request.body.idToken);
     const idToken = request.body.idToken;
     let decodedIdToken;
     try {
